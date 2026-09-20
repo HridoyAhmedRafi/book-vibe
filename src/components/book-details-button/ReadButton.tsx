@@ -7,7 +7,10 @@ import { toast } from "react-toastify";
 
 const ReadButton = ({ book }: { book: Ibook }) => {
   const { readBooks, setReadBooks } = useContext(BooksContext);
-  console.log(readBooks);
+
+  const alreadyRead = readBooks.some(
+    (bookItem) => bookItem.bookId === book.bookId,
+  );
 
   const handleReadButton = () => {
     setReadBooks([...readBooks, book]);
@@ -20,9 +23,10 @@ const ReadButton = ({ book }: { book: Ibook }) => {
     <div>
       <button
         onClick={() => handleReadButton()}
-        className=" cursor-pointer flex-1 rounded-lg border border-[#adafad] px-5 py-3 font-semibold text-black"
+        className=" hover:text-[#23BE0A]  hover:border-[#23BE0A] cursor-pointer flex-1 rounded-lg border border-[#adafad] px-5 py-3 font-semibold text-black"
+        disabled={alreadyRead}
       >
-        Read
+        {alreadyRead === true ? "✓ Already Read" : "Read"}
       </button>
     </div>
   );

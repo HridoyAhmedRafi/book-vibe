@@ -1,4 +1,5 @@
 import ReadButton from "@/components/book-details-button/ReadButton";
+import WishlistButton from "@/components/book-details-button/WishlistButton";
 import { Ibook } from "@/types/books.type";
 import Image from "next/image";
 
@@ -94,9 +95,7 @@ const BookDetails = async ({ params }: BookDetailsParamsProps) => {
         <div className="mt-6 flex gap-3 ">
           <ReadButton book={book}></ReadButton>
 
-          <button className="cursor-pointer flex-1 rounded-lg bg-[#50B1C9] px-5 py-3 font-semibold text-white ">
-            Wishlist
-          </button>
+          <WishlistButton book={book}></WishlistButton>
         </div>
       </div>
     </div>

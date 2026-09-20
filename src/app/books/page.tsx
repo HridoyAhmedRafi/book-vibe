@@ -1,5 +1,5 @@
 import { Ibook } from "@/types/books.type";
-import BooksCard from "../../components/shared/BooksCard";
+import BooksCard from "../../components/shared/BookCard";
 
 const getBooks = async () => {
   const res = await fetch("http://localhost:3000/booksData.json");

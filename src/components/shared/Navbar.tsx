@@ -9,13 +9,13 @@ const Navbar = () => {
         </li>
       </Link>
       <Link href="/books">
-        <li className="text-[#424242]">Books</li>
+        <li className="text-[#424242] hover:text-[#23BE0A]">Books</li>
       </Link>
       <Link href="/listed-books">
-        <li className="text-[#424242]">Listed Books</li>
+        <li className="text-[#424242] hover:text-[#23BE0A]">Listed Books</li>
       </Link>
-      <Link href="#">
-        <li className="text-[#424242]">Pages to Read</li>
+      <Link href="/read-books">
+        <li className="text-[#424242] hover:text-[#23BE0A]">Pages to Read</li>
       </Link>
     </>
   );
