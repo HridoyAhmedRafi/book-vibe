@@ -1,7 +1,13 @@
+import Banner from "@/components/homepage/Banner";
+import Books from "@/components/homepage/Books";
+
 const page = () => {
   return (
     <div>
-      <h1>Home Page</h1>
+      <div className="container mx-auto px-4">
+        <Banner></Banner>
+        <Books></Books>
+      </div>
     </div>
   );
 };
