@@ -11,7 +11,7 @@ const playfair = Playfair_Display({
 
 const Banner = () => {
   return (
-    <section className=" group relative my-5 overflow-hidden rounded-2xl border border-[#23BE0A] bg-white shadow-[0_25px_70px_rgba(20,25,20,0.12)]">
+    <section className=" group relative my-5 overflow-hidden rounded-2xl border border-[#23BE0A] bg-white ]">
       <div
         className="absolute inset-0 opacity-[0.035]"
         style={{

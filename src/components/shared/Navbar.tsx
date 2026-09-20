@@ -3,10 +3,13 @@ import Link from "next/link";
 const Navbar = () => {
   const links = (
     <>
-      <Link href="#">
+      <Link href="/">
         <li className="border border-[#23BE0A] px-4 py-2 rounded text-[#23BE0A] font-semibold">
           Home
         </li>
+      </Link>
+      <Link href="/books">
+        <li className="text-[#424242]">Books</li>
       </Link>
       <Link href="#">
         <li className="text-[#424242]">Listed Books</li>

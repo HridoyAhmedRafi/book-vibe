@@ -16,8 +16,8 @@ const Books = async () => {
         <p className="text-[#23BE0A]">OUR COLLECTION</p>
         <h1 className=" text-[#131313] text-[40px]">Explore Popular Books</h1>
       </div>
-      <div className="grid grid-cols-4 gap-5">
-        {booksData.map((book: Ibook) => (
+      <div className="grid grid-cols-3 gap-5">
+        {booksData.slice(0, 9).map((book: Ibook) => (
           <BooksCard book={book} key={book.bookId}></BooksCard>
         ))}
       </div>
