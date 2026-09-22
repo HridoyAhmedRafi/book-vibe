@@ -8,9 +8,16 @@ interface BookDetailsParamsProps {
 }
 
 const getBooks = async () => {
-  const res = await fetch("http://localhost:3000/booksData.json");
-  const data = await res.json();
-  return data;
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`,
+    );
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.log("Error", error);
+    return [];
+  }
 };
 
 const BookDetails = async ({ params }: BookDetailsParamsProps) => {
