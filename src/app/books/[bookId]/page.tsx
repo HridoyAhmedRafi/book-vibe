@@ -25,7 +25,7 @@ const BookDetails = async ({ params }: BookDetailsParamsProps) => {
   const book = booksData.find(
     (book: Ibook) => String(book.bookId) === String(bookId),
   ) as Ibook;
-  console.log(book);
+
   return (
     <div className="container mx-auto px-4 grid max-w-4xl grid-cols-1 gap-8 rounded-2xl border border-[#e2e5df] bg-white p-6 my-20 md:grid-cols-2 md:p-8">
       {/* Book Image */}
