@@ -6,9 +6,11 @@ import { useContext } from "react";
 import {
   Bar,
   BarChart,
+  BarShapeProps,
   CartesianGrid,
   Label,
   LabelList,
+  LabelProps,
   Tooltip,
   XAxis,
   YAxis,
