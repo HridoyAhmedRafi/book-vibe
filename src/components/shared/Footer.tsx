@@ -14,7 +14,7 @@ const Footer = () => {
           </div>
 
           {/* Links */}
-          <div className="flex items-center gap-6 text-sm text-[#555a54]">
+          <div className="flex items-center gap-6 text-[12px] text-[#555a54]">
             <a href="#" className="transition-colors hover:text-[#23BE0A]">
               Home
             </a>
@@ -28,8 +28,11 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-[#e5e7e3] py-5 text-center text-sm text-[#858982]">
+        <div className="flex justify-between border-t border-[#e5e7e3] py-5 text-center text-[12px] text-[#858982]">
           © {new Date().getFullYear()} Book Vibe. All rights reserved.
+          <span className="text-[10px] font-bold">
+            DEV BY <span className="text-[#23be0a]">HRIDOY</span>
+          </span>
         </div>
       </div>
     </footer>

@@ -23,7 +23,7 @@ const BookDetails = async ({ params }: BookDetailsParamsProps) => {
   const { bookId } = await params;
   const booksData = await getBooks();
   const book = booksData.find(
-    (book: Ibook) => String(book.bookId) === String(bookId),
+    (book: Ibook) => String(book.bookId) === String(bookId),  
   ) as Ibook;
 
   return (
