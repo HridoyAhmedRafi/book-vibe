@@ -71,7 +71,7 @@ const ReadBooksPage = () => {
     <div className="container mx-auto px-4 py-10">
       <div className="w-full overflow-x-auto">
         {readBooks.length > 0 ? (
-          <div className="mx-auto w-full max-w-[900px] min-w-[600px]">
+          <div className="mx-auto w-full max-w-225 min-w-150]">
             <BarChart
               style={{
                 width: "100%",
