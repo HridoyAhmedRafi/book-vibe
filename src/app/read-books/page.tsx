@@ -69,39 +69,43 @@ const ReadBooksPage = () => {
 
   return (
     <div className="container mx-auto px-4 py-10">
-      <div className=" flex justify-center px-10">
+      <div className="w-full overflow-x-auto">
         {readBooks.length > 0 ? (
-          <BarChart
-            style={{
-              width: "100%",
-              maxWidth: "900px",
-              height: "500px",
-            }}
-            responsive
-            data={data}
-            margin={{
-              top: 20,
-              right: 20,
-              left: 10,
-              bottom: 10,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 4" strokeWidth={1} />
-            <Tooltip cursor={{ fillOpacity: 0.5 }} />
-            <XAxis
-              dataKey="name"
-              interval={0}
-              tick={{ fontSize: 11 }}
-              height={60}
-            />
-            <YAxis width="auto" />
-            <Bar dataKey="uv" shape={TriangleBar} activeBar>
-              <LabelList content={CustomColorLabel} position="top" />
-            </Bar>
-            {/* <RechartsDevtools /> */}
-          </BarChart>
+          <div className="mx-auto w-full max-w-[900px] min-w-[600px]">
+            <BarChart
+              style={{
+                width: "100%",
+                height: "500px",
+              }}
+              responsive
+              data={data}
+              margin={{
+                top: 20,
+                right: 20,
+                left: 10,
+                bottom: 10,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 4" strokeWidth={1} />
+
+              <Tooltip cursor={{ fillOpacity: 0.5 }} />
+
+              <XAxis
+                dataKey="name"
+                interval={0}
+                tick={{ fontSize: 11 }}
+                height={60}
+              />
+
+              <YAxis width="auto" />
+
+              <Bar dataKey="uv" shape={TriangleBar} activeBar>
+                <LabelList content={CustomColorLabel} position="top" />
+              </Bar>
+            </BarChart>
+          </div>
         ) : (
-          <h1 className="text-center py-10">No read books to display</h1>
+          <h1 className="py-10 text-center">No read books to display</h1>
         )}
       </div>
     </div>

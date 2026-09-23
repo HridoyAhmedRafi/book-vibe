@@ -16,7 +16,7 @@ const BookCard = ({ book }: bookProps) => {
           alt={book.bookName}
           width={400}
           height={500}
-          className="h-60 w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+          className="   h-60 w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
         />
 
         {/* Category */}
@@ -33,16 +33,16 @@ const BookCard = ({ book }: bookProps) => {
 
       {/* Content */}
       <div className="px-4 pb-4">
-        <h2 className="line-clamp-2 text-lg font-semibold leading-snug text-[#161a15] transition-colors duration-300 group-hover:text-[#23BE0A]">
+        <h2 className="line-clamp-2 text-[14px] md:text-lg font-semibold leading-snug text-[#161a15] transition-colors duration-300 group-hover:text-[#23BE0A]">
           {book.bookName}
         </h2>
 
-        <p className="mt-1.5 text-sm text-[#6b7069]">
+        <p className=" mt-1 md:mt-1.5 text-[10px] md:text-sm text-[#6b7069]">
           By <span className="font-medium text-[#424642]">{book.author}</span>
         </p>
 
         {/* Tags */}
-        <div className="mt-3 flex flex-wrap gap-1.5">
+        <div className=" mt-2 md:mt-3 flex flex-wrap gap-1.5">
           {book.tags.map((tag) => (
             <span
               key={tag}
@@ -54,7 +54,7 @@ const BookCard = ({ book }: bookProps) => {
         </div>
 
         {/* Book Info */}
-        <div className="mt-4 grid grid-cols-2 gap-2 border-y border-[#eceeea] py-3">
+        <div className="mt-2 md:mt-4 grid grid-cols-2 gap-2 border-y border-[#eceeea] py-3">
           <div>
             <p className="text-xs text-[#858982]">Pages</p>
             <p className="mt-1 text-sm font-semibold text-[#252925]">
@@ -86,7 +86,7 @@ const BookCard = ({ book }: bookProps) => {
 
         {/* Button */}
         <Link href={`/books/${book.bookId}`}>
-          <button className="cursor-pointer mt-4 w-full rounded-lg border border-[#23BE0A] px-4 py-2 text-sm font-semibold text-[#23BE0A] transition-all duration-300 hover:bg-[#23BE0A] hover:text-white">
+          <button className="cursor-pointer mt-2 md:mt-4 w-full rounded-lg border border-[#23BE0A] px-4 py-2 text-sm font-semibold text-[#23BE0A] transition-all duration-300 hover:bg-[#23BE0A] hover:text-white">
             View Details
           </button>
         </Link>

@@ -1,28 +1,43 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const links = (
     <>
-      <Link href="/">
-        <li className="border border-[#23BE0A] px-4 py-2 rounded text-[#23BE0A] font-semibold">
-          Home
-        </li>
+      <Link
+        className={` ${usePathname() === "/" ? "border border-[#23BE0A] px-4 py-2 rounded text-[#23BE0A] font-semibold" : ""}`}
+        href="/"
+      >
+        Home
       </Link>
-      <Link href="/books">
-        <li className="text-[#424242] hover:text-[#23BE0A]">Books</li>
+
+      <Link
+        className={` ${usePathname() === "/books" ? "border border-[#23BE0A] px-4 py-2 rounded text-[#23BE0A] font-semibold" : ""}`}
+        href="/books"
+      >
+        Books
       </Link>
-      <Link href="/listed-books">
-        <li className="text-[#424242] hover:text-[#23BE0A]">Listed Books</li>
+
+      <Link
+        className={` ${usePathname() === "/listed-books" ? "border border-[#23BE0A] px-4 py-2 rounded text-[#23BE0A] font-semibold" : ""}`}
+        href="/listed-books"
+      >
+        Listed Books
       </Link>
-      <Link href="/read-books">
-        <li className="text-[#424242] hover:text-[#23BE0A]">Pages to Read</li>
+
+      <Link
+        className={` ${usePathname() === "/read-books" ? "border border-[#23BE0A] px-4 py-2 rounded text-[#23BE0A] font-semibold" : ""}`}
+        href="/read-books"
+      >
+        Pages to Read
       </Link>
     </>
   );
 
   return (
-    <nav className=" border-b border-[#e5e7e3]  ">
-      <div className="container mx-auto px-4">
+    <nav className="  border-b border-[#e5e7e3]  ">
+      <div className="container mx-auto ">
         <div className="navbar">
           <div className="navbar-start  ">
             <div className="dropdown">
@@ -55,7 +70,7 @@ const Navbar = () => {
                 {links}
               </ul>
             </div>
-            <div className="btn btn-ghost  text-[#131313] text-[20px]">
+            <div className="btn btn-ghost  text-[#131313] text-[20px] absolute right-4 md:static">
               Book <span className="text-[#23BE0A]">Vibe</span>
             </div>
           </div>
@@ -64,7 +79,7 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <div className="navbar-end flex items-center gap-2 font-sans ">
+          <div className="hidden navbar-end md:flex items-center gap-2 font-sans ">
             <button className="btn  px-5 bg-[#23BE0A] text-white ">
               Sign In
             </button>

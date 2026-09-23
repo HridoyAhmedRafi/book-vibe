@@ -23,12 +23,13 @@ const BookDetails = async ({ params }: BookDetailsParamsProps) => {
   const { bookId } = await params;
   const booksData = await getBooks();
   const book = booksData.find(
-    (book: Ibook) => String(book.bookId) === String(bookId),  
+    (book: Ibook) => String(book.bookId) === String(bookId),
   ) as Ibook;
 
   return (
     <div className="container mx-auto px-4 grid max-w-4xl grid-cols-1 gap-8 rounded-2xl border border-[#e2e5df] bg-white p-6 my-20 md:grid-cols-2 md:p-8">
       {/* Book Image */}
+
       <div className="flex items-center justify-center rounded-xl bg-[#f5f7f3] p-6">
         <Image
           src={book.image}
@@ -42,7 +43,7 @@ const BookDetails = async ({ params }: BookDetailsParamsProps) => {
       {/* Book Details */}
       <div className="flex flex-col justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-[#131313]">{book.bookName}</h1>
+          <h1 className="text-xl md:text-3xl font-bold text-[#131313]">{book.bookName}</h1>
 
           <p className="mt-2 text-lg text-[#555]">
             By <span className="font-medium">{book.author}</span>

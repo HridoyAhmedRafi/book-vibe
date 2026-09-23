@@ -20,15 +20,15 @@ const ReadButton = ({ book }: { book: Ibook }) => {
   };
 
   return (
-    <div>
-      <button
-        onClick={() => handleReadButton()}
-        className=" hover:text-[#23BE0A]  hover:border-[#23BE0A] cursor-pointer flex-1 rounded-lg border border-[#adafad] px-5 py-3 font-semibold text-black"
-        disabled={alreadyRead}
-      >
-        {alreadyRead === true ? "✓ Already Read" : "Read"}
-      </button>
-    </div>
+<div>
+  <button
+    onClick={() => handleReadButton()}
+    className="cursor-pointer flex-1 rounded-lg border border-[#adafad] px-3 py-2 text-sm font-semibold text-black hover:border-[#23BE0A] hover:text-[#23BE0A] md:px-5 md:py-3 md:text-base"
+    disabled={alreadyRead}
+  >
+    {alreadyRead === true ? "✓ Already Read" : "Read"}
+  </button>
+</div>
   );
 };
 

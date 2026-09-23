@@ -19,15 +19,15 @@ const WishlistButton = ({ book }: { book: Ibook }) => {
   };
 
   return (
-    <div>
-      <button
-        onClick={() => handleWishlistButton()}
-        className="cursor-pointer flex-1 rounded-lg border border-transparent bg-[#50B1C9] px-5 py-3 font-semibold text-white hover:border-[#50B1C9] hover:bg-transparent hover:text-[#50B1C9]"
-        disabled={alreadyWishlisted}
-      >
-        {alreadyWishlisted === true ? "✓ Already Wishlisted" : "Wishlist"}
-      </button>
-    </div>
+<div>
+  <button
+    onClick={() => handleWishlistButton()}
+    className="cursor-pointer flex-1 rounded-lg border border-transparent bg-[#50B1C9] px-3 py-2 text-sm font-semibold text-white hover:border-[#50B1C9] hover:bg-transparent hover:text-[#50B1C9] md:px-5 md:py-3 md:text-base"
+    disabled={alreadyWishlisted}
+  >
+    {alreadyWishlisted === true ? "✓ Already Wishlisted" : "Wishlist"}
+  </button>
+</div>
   );
 };
 

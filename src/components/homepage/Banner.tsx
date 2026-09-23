@@ -21,30 +21,30 @@ const Banner = () => {
         }}
       />
 
-      <div className="relative grid grid-cols-2 items-center gap-4 py-10 my-5 px-5">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 items-center gap-4 py-10 my-5 px-5">
         <div className="mx-auto">
           <div className="mb-5 flex items-center gap-3">
-            <span className="h-[1px] w-8 bg-[#23BE0A]" />
+            <span className="h-px w-8 bg-[#23BE0A]" />
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#5c625b]">
               Curated Collection
             </span>
           </div>
 
           <h1
-            className={`${playfair.className} text-[#111410] text-[56px] mb-10 font-medium leading-[1.05] tracking-[-2px]`}
+            className={`${playfair.className} text-[#111410] text-[40px] md:text-[56px] mb-10 font-medium leading-[1.05] tracking-[-2px]`}
           >
             Books to freshen up
             <br />
             <span className="relative">
               your bookshelf
-              <span className="absolute -bottom-2 left-0 h-[3px] w-20 rounded-full bg-[#23BE0A]" />
+              <span className="absolute -bottom-2 left-0 h-0.75 w-20 rounded-full bg-[#23BE0A]" />
             </span>
           </h1>
 
-          <button className="group/btn relative overflow-hidden rounded-full border border-[#161a15] bg-[#161a15] px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(0,0,0,0.16)] transition-all duration-300 hover:border-[#23BE0A]">
+          <button className="group/btn relative overflow-hidden rounded-full border border-[#161a15] bg-[#161a15] px-5 py-3 text-[13px] md:text-sm font-semibold text-white shadow-[0_8px_20px_rgba(0,0,0,0.16)] transition-all duration-300 hover:border-[#23BE0A]">
             <span className="cursor-pointer relative z-10 flex items-center gap-3">
               View The List
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#23BE0A] text-[#111410] transition-transform duration-300 group-hover/btn:translate-x-1">
+              <span className="flex h-5 w-5 md:h-7 md:w-7 items-center justify-center rounded-full bg-[#23BE0A] text-[#111410] transition-transform duration-300 group-hover/btn:translate-x-1">
                 →
               </span>
             </span>
@@ -57,9 +57,9 @@ const Banner = () => {
           <div className="relative">
             <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#23BE0A]/15 blur-3xl" />
 
-            <div className="absolute left-1/2 top-1/2 h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#23BE0A]/20" />
+            <div className="absolute left-1/2 top-1/2 h-80 w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#23BE0A]/20" />
 
-            <div className="relative rounded-[2rem] border border-white/70 bg-white/30 p-5 shadow-[0_25px_45px_rgba(30,35,30,0.12)] backdrop-blur-sm">
+            <div className="relative rounded-4xl border border-white/70 bg-white/30 p-5 shadow-[0_25px_45px_rgba(30,35,30,0.12)] backdrop-blur-sm">
               <Image
                 src={bannerImage}
                 alt="Banner Image"

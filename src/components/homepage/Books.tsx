@@ -20,9 +20,11 @@ const Books = async () => {
     <div className="my-20">
       <div className="flex flex-col items-center mb-10">
         <p className="text-[#23BE0A]">OUR COLLECTION</p>
-        <h1 className=" text-[#131313] text-[40px]">Explore Popular Books</h1>
+        <h1 className=" text-[#131313] text-[25px] md:text-[40px]">
+          Explore Popular Books
+        </h1>
       </div>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {booksData.slice(0, 9).map((book: Ibook) => (
           <BooksCard book={book} key={book.bookId}></BooksCard>
         ))}

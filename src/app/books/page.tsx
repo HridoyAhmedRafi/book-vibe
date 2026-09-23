@@ -17,18 +17,18 @@ const BooksPage = async () => {
   const booksData = await getBooks();
 
   return (
-    <div className="my-20">
+    <div className="my-20 container mx-auto px-4">
       <div className="flex flex-col items-center mb-10">
         <p className="text-[#23BE0A]">OUR COLLECTION</p>
-        <h1 className=" text-[#131313] text-[40px]">Explore All Books</h1>
+        <h1 className=" text-[#131313] text-[33px] md:text-[40px]">Explore All Books</h1>
       </div>
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         {booksData.map((book: Ibook) => (
           <BooksCard book={book} key={book.bookId}></BooksCard>
         ))}
       </div>
     </div>
   );
-};
+};  
 
 export default BooksPage;
