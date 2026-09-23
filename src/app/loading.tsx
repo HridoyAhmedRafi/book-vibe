@@ -32,7 +32,6 @@ const Globalloading = () => {
 
         {/* Book Info */}
         <div className="mt-2 grid grid-cols-2 gap-2 border-y border-gray-200 py-3 md:mt-4">
-          {/* Pages */}
           <div>
             <div className="h-3 w-12 rounded bg-gray-200" />
             <div className="mt-2 h-4 w-16 rounded bg-gray-300" />
